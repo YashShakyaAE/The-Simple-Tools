@@ -21,6 +21,13 @@
   --accent-gradient-hover: linear-gradient(135deg, #ff234f 0%, #9d3bf3 50%, #a815e8 100%);
   --accent-gradient-subtle: linear-gradient(135deg, rgba(220, 20, 60, 0.15) 0%, rgba(138, 43, 226, 0.15) 50%, rgba(148, 0, 211, 0.15) 100%);
 
+  /* Brand lockup — light crimson → light purple (logo, wordmark, favicon) */
+  --brand-crimson-light: #FB7185;
+  --brand-purple-light: #C084FC;
+  --logo-gradient: linear-gradient(135deg, #FB7185 0%, #E879A8 48%, #C084FC 100%);
+  --logo-gradient-hover: linear-gradient(135deg, #fda4af 0%, #f0abfc 55%, #d8b4fe 100%);
+  --wordmark-gradient: linear-gradient(120deg, #FDA4AF 0%, #F0ABFC 60%, #D8B4FE 100%);
+
   /* Borders & Outlines */
   --border-glass: rgba(148, 0, 211, 0.22);
   --border-glass-hover: rgba(220, 20, 60, 0.65);
@@ -32,8 +39,8 @@
   --text-secondary: #E2E8F0;
   --text-muted: #94A3B8;
   --text-dim: #64748B;
-  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, monospace;
+  --font-main: 'Schibsted Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Red Hat Mono', 'JetBrains Mono', Consolas, Monaco, monospace;
 
   /* Shadows */
   --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 0 1px 1px rgba(255, 255, 255, 0.05);

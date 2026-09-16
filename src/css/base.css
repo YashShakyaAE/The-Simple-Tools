@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+/* Fonts are loaded via <link> in index.html (Schibsted Grotesk + Red Hat Mono).
+   Keeping this file @import-free so Vite never blocks rendering on it. */
 
 *, *::before, *::after {
   box-sizing: border-box;

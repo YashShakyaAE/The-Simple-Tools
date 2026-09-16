@@ -112,7 +112,9 @@ export function initToastSystem() {
     const toast = document.createElement('div');
     toast.className = 'toast';
     toast.innerHTML = `
-      <div style="font-size:1.2rem; color:var(--crimson);">⚡</div>
+      <div style="display:flex; align-items:center; justify-content:center; width:26px; height:26px; border-radius:8px; background:var(--logo-gradient); flex-shrink:0;" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2z"/></svg>
+      </div>
       <div style="font-size:0.9rem; font-weight:500; color:#fff;">${escapeHtml(message)}</div>
     `;
     container.appendChild(toast);

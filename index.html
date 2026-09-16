@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Brand typeface: Schibsted Grotesk (UI) + Red Hat Mono (code/labels) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;500;700&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     
     <!-- SEO Meta Tags -->
     <title>TheSimpleTools - The Ultimate All-in-One Online Utility Toolbox</title>
@@ -41,8 +49,8 @@
     }
     </script>
 
-    <!-- Favicon Icon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%23DC143C'/><stop offset='50%25' stop-color='%238A2BE2'/><stop offset='100%25' stop-color='%239400D3'/></linearGradient></defs><rect width='100' height='100' rx='25' fill='%230D0D12'/><circle cx='50' cy='50' r='35' fill='none' stroke='url(%23g)' stroke-width='8'/><polygon points='50,25 72,68 28,68' fill='url(%23g)'/></svg>" />
+    <!-- Favicon: TheSimpleTools "ST" duotone tile (light crimson → light purple) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%23FB7185'/><stop offset='55%25' stop-color='%23E879A8'/><stop offset='100%25' stop-color='%23C084FC'/></linearGradient></defs><rect width='64' height='64' rx='15' fill='url(%23g)'/><rect x='6' y='5' width='52' height='18' rx='9' fill='white' opacity='0.18'/><text x='32' y='44' text-anchor='middle' font-family='Arial,sans-serif' font-weight='900' font-size='27' fill='white' letter-spacing='-1'>ST</text></svg>" />
   </head>
   <body>
     <!-- Dynamic Ambient Glowing Mesh & Background Effects -->
@@ -60,14 +68,13 @@
         <div class="container">
           <nav class="navbar" aria-label="Main Navigation">
             <a href="#hero" class="site-logo" id="header-logo" aria-label="TheSimpleTools Home">
-              <div class="logo-icon-badge">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                  <polyline points="2 17 12 22 22 17"></polyline>
-                  <polyline points="2 12 12 17 22 12"></polyline>
+              <div class="logo-icon-badge" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <text x="12" y="16.8" text-anchor="middle" font-family="'Schibsted Grotesk',Arial,sans-serif" font-weight="800" font-size="11.5" letter-spacing="-0.5" fill="#fff">ST</text>
+                  <rect x="6.5" y="18.2" width="11" height="1.7" rx="0.85" fill="#fff" opacity="0.85"/>
                 </svg>
               </div>
-              <span>TheSimpleTools</span>
+              <span>TheSimple<em class="logo-word-accent">Tools</em></span>
             </a>
 
             <ul class="nav-links" id="nav-links">
@@ -88,8 +95,9 @@
                 <span>Explore Tools</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
               </a>
-              <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+              <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+                <svg class="icon-burger" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg>
+                <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"></line><line x1="18" y1="6" x2="6" y2="18"></line></svg>
               </button>
             </div>
           </nav>
@@ -101,7 +109,8 @@
         <section class="hero-section" id="hero">
           <div class="container">
             <div class="hero-pill-badge">
-              <span>⚡ The Ultimate All-in-One Online Utility Toolbox</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2z"/></svg>
+              <span>The Ultimate All-in-One Online Utility Toolbox</span>
             </div>
 
             <h1 class="hero-title">
@@ -184,7 +193,9 @@
 
             <!-- Empty Search Results State -->
             <div class="empty-search-state" id="empty-search-state">
-              <div style="font-size:3rem; margin-bottom:1rem;">🔍</div>
+              <div class="empty-search-icon" aria-hidden="true">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+              </div>
               <h3 style="font-size:1.4rem; font-weight:700; color:#fff; margin-bottom:0.5rem;">No tools matched your search</h3>
               <p style="color:var(--text-muted); max-width:460px; margin:0 auto 1.5rem;">
                 Try searching for formats like "MP3", "APK", "PNG", "JSON", or browse by category above.
@@ -265,14 +276,13 @@
           <div class="footer-top">
             <div class="footer-brand">
               <a href="#hero" class="site-logo">
-                <div class="logo-icon-badge">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5">
-                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                    <polyline points="2 17 12 22 22 17"></polyline>
-                    <polyline points="2 12 12 17 22 12"></polyline>
+                <div class="logo-icon-badge" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <text x="12" y="16.8" text-anchor="middle" font-family="'Schibsted Grotesk',Arial,sans-serif" font-weight="800" font-size="11.5" letter-spacing="-0.5" fill="#fff">ST</text>
+                    <rect x="6.5" y="18.2" width="11" height="1.7" rx="0.85" fill="#fff" opacity="0.85"/>
                   </svg>
                 </div>
-                <span>TheSimpleTools</span>
+                <span>TheSimple<em class="logo-word-accent">Tools</em></span>
               </a>
               <p>
                 The Ultimate All-in-One Online Utility Toolbox. Private, browser-native media processing, package utilities, and developer suites.

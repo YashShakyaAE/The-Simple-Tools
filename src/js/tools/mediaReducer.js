@@ -19,16 +19,16 @@ export function renderMediaReducer(container) {
       </div>
 
       <div id="reducer-editor" style="display:none; margin-top:1.5rem;">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.25rem;">
-          <div style="background:rgba(20,20,30,0.7); border:1px solid var(--border-glass); border-radius:var(--radius-md); padding:0.9rem; text-align:center;">
-            <div style="font-size:0.78rem; color:var(--text-muted); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.5rem;">Original</div>
+        <div class="split-panels">
+          <div class="split-panel">
+            <div class="split-panel-label">Original</div>
             <div id="reducer-orig-preview"></div>
-            <div id="reducer-orig-info" style="font-size:0.8rem; color:var(--text-muted); margin-top:0.5rem;">-</div>
+            <div id="reducer-orig-info" class="split-panel-foot">-</div>
           </div>
-          <div style="background:rgba(20,20,30,0.7); border:1px solid rgba(34,197,94,0.3); border-radius:var(--radius-md); padding:0.9rem; text-align:center;">
-            <div style="font-size:0.78rem; color:#86efac; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.5rem;">≤ 25 MB Result</div>
+          <div class="split-panel">
+            <div class="split-panel-label ok">≤ 25 MB Result</div>
             <div id="reducer-result-preview"></div>
-            <div id="reducer-result-info" style="font-size:0.8rem; color:#86efac; margin-top:0.5rem;">Drop a file to begin</div>
+            <div id="reducer-result-info" class="split-panel-foot ok">Drop a file to begin</div>
           </div>
         </div>
 

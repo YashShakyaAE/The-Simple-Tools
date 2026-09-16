@@ -21,16 +21,16 @@ export function renderImageUpscaler(container) {
 
       <div id="upscale-editor-panel" style="display:none; margin-top:1.5rem;">
         <!-- Original vs Preview -->
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.25rem;">
-          <div style="background:rgba(20,20,30,0.7); border:1px solid var(--border-glass); border-radius:var(--radius-md); padding:0.75rem; text-align:center;">
-            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Original</div>
+        <div class="split-panels">
+          <div class="split-panel">
+            <div class="split-panel-label">Original</div>
             <img id="upscale-preview-original" class="image-preview-img" alt="Original" style="max-height:240px; border-radius:var(--radius-sm); image-rendering:pixelated;" />
-            <div id="upscale-orig-info" style="font-size:0.78rem; color:var(--text-muted); margin-top:0.4rem;">-</div>
+            <div id="upscale-orig-info" class="split-panel-foot">-</div>
           </div>
-          <div style="background:rgba(20,20,30,0.7); border:1px solid var(--border-glass); border-radius:var(--radius-md); padding:0.75rem; text-align:center;">
-            <div style="font-size:0.8rem; color:#86efac; margin-bottom:0.5rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Upscaled Preview</div>
+          <div class="split-panel">
+            <div class="split-panel-label ok">Upscaled Preview</div>
             <img id="upscale-preview-result" class="image-preview-img" alt="Upscaled" style="max-height:240px; border-radius:var(--radius-sm);" />
-            <div id="upscale-result-info" style="font-size:0.78rem; color:#86efac; margin-top:0.4rem;">Select a resolution below</div>
+            <div id="upscale-result-info" class="split-panel-foot ok">Select a resolution below</div>
           </div>
         </div>
 
@@ -231,10 +231,10 @@ export function renderImageUpscaler(container) {
 
     ctx.shadowBlur = 0;
     ctx.fillStyle = '#fff';
-    ctx.font = 'bold 22px Outfit, sans-serif';
+    ctx.font = 'bold 22px Schibsted Grotesk, sans-serif';
     ctx.textAlign = 'center';
     ctx.fillText('240p Low-Res', 160, 125);
-    ctx.font = '14px Outfit, sans-serif';
+    ctx.font = '14px Schibsted Grotesk, sans-serif';
     ctx.fillStyle = '#E2E8F0';
     ctx.fillText('Ready for 4K Upscale', 160, 150);
 

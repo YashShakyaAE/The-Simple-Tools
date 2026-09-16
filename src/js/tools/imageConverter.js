@@ -135,10 +135,10 @@ export function renderImageConverter(container) {
 
     ctx.shadowBlur = 0;
     ctx.fillStyle = '#FFFFFF';
-    ctx.font = 'bold 56px Outfit, sans-serif';
+    ctx.font = 'bold 56px Schibsted Grotesk, sans-serif';
     ctx.textAlign = 'center';
     ctx.fillText('TheSimple \'s Tools High-Res Showcase', 600, 420);
-    ctx.font = '24px Outfit, sans-serif';
+    ctx.font = '24px Schibsted Grotesk, sans-serif';
     ctx.fillStyle = '#E2E8F0';
     ctx.fillText('100% Client-Side Universal Image Converter', 600, 480);
 

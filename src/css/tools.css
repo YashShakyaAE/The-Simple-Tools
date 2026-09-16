@@ -38,13 +38,55 @@
 /* Tool controls grid */
 .tool-controls-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr));
   gap: 1.25rem;
   margin: 1.25rem 0;
   background: rgba(15, 15, 24, 0.6);
   padding: 1.25rem;
   border-radius: var(--radius-md);
   border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Before/after + option split panels (upscaler, size reducer, …).
+   Two columns on desktop, stacked on phones. */
+.split-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.split-panel {
+  background: rgba(20, 20, 30, 0.7);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 0.9rem;
+  text-align: center;
+  min-width: 0;
+}
+
+.split-panel-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.split-panel-label.ok {
+  color: #86efac;
+}
+
+.split-panel-foot {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  word-break: break-word;
+}
+
+.split-panel-foot.ok {
+  color: #86efac;
 }
 
 .control-item {
@@ -768,5 +810,51 @@ input[type="range"]::-webkit-slider-thumb:hover {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 1rem;
+}
+
+/* ==========================================================================
+   TOOL WORKSPACE RESPONSIVE — phones & small tablets
+   ========================================================================== */
+@media (max-width: 640px) {
+  .split-panels {
+    grid-template-columns: 1fr;
+  }
+  .tool-controls-row {
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .dual-editor-grid {
+    grid-template-columns: 1fr;
+  }
+  .calculator-layout {
+    grid-template-columns: 1fr;
+  }
+  .regex-layout {
+    grid-template-columns: 1fr;
+  }
+  .editor-textarea {
+    height: 180px;
+  }
+  .image-preview-img {
+    max-height: 200px;
+  }
+  .visualizer-canvas {
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calc-keypad-grid {
+    gap: 0.4rem;
+  }
+  .calc-current-line {
+    font-size: 1.6rem;
+  }
+  .calculator-main-card {
+    padding: 1rem;
+  }
+  .color-formats-grid {
+    grid-template-columns: 1fr;
+  }
 }
 

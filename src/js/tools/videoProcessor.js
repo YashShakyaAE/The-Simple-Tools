@@ -139,7 +139,7 @@ export function renderVideoProcessor(container) {
 
         ctx.shadowBlur = 0;
         ctx.fillStyle = '#fff';
-        ctx.font = 'bold 44px Outfit, sans-serif';
+        ctx.font = 'bold 44px Schibsted Grotesk, sans-serif';
         ctx.textAlign = 'center';
         ctx.fillText('TheSimple \'s Tools Video Processor', 640, 370);
 

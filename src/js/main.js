@@ -161,7 +161,7 @@ function renderToolsGrid() {
   });
 }
 
-// AI-Style Interactive Search Bar
+// Command-palette style interactive search bar
 function initSearch() {
   const searchInput = document.querySelector('#global-search-input');
   const clearBtn = document.querySelector('#search-clear-btn');
@@ -818,15 +818,30 @@ function initMobileNav() {
   const toggle = document.querySelector('#mobile-nav-toggle');
   const links = document.querySelector('#nav-links');
   if (toggle && links) {
+    const setOpen = (open) => {
+      links.classList.toggle('active', open);
+      toggle.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    };
+
     toggle.addEventListener('click', () => {
-      links.classList.toggle('active');
+      setOpen(!links.classList.contains('active'));
     });
 
     // Close menu when a link is clicked
     links.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
-        links.classList.remove('active');
+        setOpen(false);
       });
+    });
+
+    // Close on Escape and hand focus back to the toggle
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && links.classList.contains('active')) {
+        setOpen(false);
+        toggle.focus();
+      }
     });
   }
 }
