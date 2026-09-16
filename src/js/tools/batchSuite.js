@@ -209,7 +209,7 @@ export function renderBatchSuite(container) {
       processBtn.textContent = '⚡ Process & Download ZIP';
       if (window.showToast) window.showToast(`Batch processed! Downloaded ZIP (${formatBytes(zipBlob.size)})`);
     } catch (err) {
-      alert('Batch processing error: ' + err.message);
+      if (window.showToast) window.showToast('Batch processing error: ' + err.message);
       processBtn.disabled = false;
       processBtn.textContent = '⚡ Process & Download ZIP';
     }

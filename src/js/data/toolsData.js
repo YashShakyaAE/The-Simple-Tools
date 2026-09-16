@@ -98,6 +98,26 @@ export const TOOLS_DATA = [
     desc: 'Multi-file drag-and-drop batch processing interface. Convert multiple images, calculate mass checksums, and package all output files into an instant ZIP archive.',
     tags: ['Drag & Drop', 'Batch Processing', 'Zip Exporter', 'Mass Actions'],
     icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>`
+  },
+  {
+    id: 'image-upscaler',
+    title: 'Image Upscaler to 4K',
+    badge: 'HD → 4K AI Boost',
+    badgeType: 'ai',
+    category: 'converters',
+    desc: 'Upscale 240p, 480p, 1080p and 1440p images to crisp 1080p, 1440p or 4K Ultra HD with multi-pass canvas enhancement and sharpening. 100% client-side.',
+    tags: ['Upscaler', '240p to 4K', '480p to 4K', '1080p', '1440p', '4K', 'Enhancer'],
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>`
+  },
+  {
+    id: 'media-reducer',
+    title: 'Video & Image Size Reducer — 25 MB',
+    badge: '≤ 25 MB Portable',
+    badgeType: 'pro',
+    category: 'audio-video',
+    desc: 'Shrink any video or image down to a 25 MB standard portable file. Smart max-fidelity fit: quality reduced first, resolution only if needed. Originality preserved.',
+    tags: ['25MB', 'Video Compressor', 'Image Compressor', 'Reduce Size', 'Portable', 'MP4', 'WEBM', 'JPEG'],
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>`
   }
 ];
 

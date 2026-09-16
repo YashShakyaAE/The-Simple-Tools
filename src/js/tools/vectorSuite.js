@@ -12,7 +12,7 @@ export function renderVectorSuite(container) {
 
       <div style="display:flex; justify-content:center; margin-top:0.75rem;">
         <button class="btn btn-secondary btn-sm" id="vec-load-demo-btn">
-          ✨ Load TheSimple 's Tools Vector Monogram Demo
+          ✨ Load TheSimpleTools Vector Monogram Demo
         </button>
       </div>
 

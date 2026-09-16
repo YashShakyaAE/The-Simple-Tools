@@ -104,7 +104,7 @@ export function renderDevSuite(container) {
           </div>
           <textarea class="editor-textarea" id="str-input" style="height:120px;" placeholder="Type text to convert case (e.g., hello world from thesimpleyash)..."></textarea>
         </div>
-        <div class="tool-controls-row" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        <div class="case-grid">
           <div class="control-item">
             <label class="control-label">camelCase</label>
             <div style="display:flex; gap:0.4rem;">
@@ -152,7 +152,7 @@ export function renderDevSuite(container) {
 
       <!-- Regex Tester Tab -->
       <div class="tab-content" id="tab-regex" style="display:none;">
-        <div class="tool-controls-row" style="grid-template-columns: 2fr 1fr;">
+        <div class="regex-layout">
           <div class="control-item">
             <label class="control-label">Regular Expression Pattern</label>
             <input type="text" class="control-input" id="regex-pattern" value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}" placeholder="e.g. \\b\\w+ed\\b" />
@@ -200,7 +200,7 @@ export function renderDevSuite(container) {
 
   btnSampleJson.addEventListener('click', () => {
     const sample = {
-      project: "TheSimple 's Tools",
+      project: "TheSimpleTools",
       tagline: "The Ultimate All-in-One Online Utility Toolbox",
       author: "YashGamerShakya",
       email: "yashgamershakya@gmail.com",
@@ -239,7 +239,7 @@ export function renderDevSuite(container) {
       xmlArea.value = `<?xml version="1.0" encoding="UTF-8"?>\n<root>\n${jsonToXml(parsed)}</root>`;
       if (window.showToast) window.showToast('Converted JSON to XML!');
     } catch (err) {
-      alert('Invalid JSON syntax: ' + err.message);
+      if (window.showToast) window.showToast('Invalid JSON syntax: ' + err.message);
     }
   }
 
@@ -280,7 +280,7 @@ export function renderDevSuite(container) {
       jsonArea.value = JSON.stringify(obj, null, 2);
       if (window.showToast) window.showToast('Converted XML to JSON!');
     } catch (err) {
-      alert('Invalid XML syntax: ' + err.message);
+      if (window.showToast) window.showToast('Invalid XML syntax: ' + err.message);
     }
   });
 
@@ -292,7 +292,7 @@ export function renderDevSuite(container) {
       b64Encoded.value = btoa(unescape(encodeURIComponent(b64Plain.value)));
       if (window.showToast) window.showToast('Encoded to Base64!');
     } catch (e) {
-      alert('Encode error: ' + e.message);
+      if (window.showToast) window.showToast('Encode error: ' + e.message);
     }
   });
   container.querySelector('#btn-b64-decode').addEventListener('click', () => {
@@ -300,7 +300,7 @@ export function renderDevSuite(container) {
       b64Plain.value = decodeURIComponent(escape(atob(b64Encoded.value)));
       if (window.showToast) window.showToast('Decoded from Base64!');
     } catch (e) {
-      alert('Decode error: ' + e.message);
+      if (window.showToast) window.showToast('Decode error: ' + e.message);
     }
   });
 

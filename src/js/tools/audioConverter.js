@@ -174,10 +174,10 @@ export function renderAudioConverter(container) {
         audioCtx.decodeAudioData(arrayBuf, (buffer) => {
           setDecodedAudio(buffer, file.name);
         }, (err) => {
-          alert('Error decoding audio: ' + err.message);
+          if (window.showToast) window.showToast('Error decoding audio: ' + err.message);
         });
       } catch (err) {
-        alert('Decoding error: ' + err.message);
+        if (window.showToast) window.showToast('Decoding error: ' + err.message);
       }
     };
     reader.readAsArrayBuffer(file);

@@ -1,4 +1,4 @@
-// Calculators & Web Utilities Suite for TheSimple 's Tools
+// Calculators & Web Utilities Suite for TheSimpleTools
 // Includes: Full Interactive Scientific & Standard Calculator, Web URL/Color Utilities,
 // Crypto Hash & HMAC with pure JS fallbacks, Multi-category Unit Converter,
 // Live Unix Epoch Clock, and Bulletproof UUID v4 Generator.
@@ -180,7 +180,7 @@ export function renderCryptoCalc(container) {
       <div class="tab-content" id="tab-hash" style="display:none;">
         <div class="form-group">
           <label class="form-label">Input Text / Message</label>
-          <textarea class="form-textarea" id="hash-input" style="height:90px;" placeholder="Type text to calculate cryptographic hashes...">TheSimple 's Tools - The Ultimate All-in-One Online Utility Toolbox</textarea>
+          <textarea class="form-textarea" id="hash-input" style="height:90px;" placeholder="Type text to calculate cryptographic hashes...">TheSimpleTools - The Ultimate All-in-One Online Utility Toolbox</textarea>
         </div>
         <div class="form-group" style="margin-bottom:1.5rem;">
           <label class="form-label">Optional HMAC Secret Key (Leave empty for standard hash)</label>

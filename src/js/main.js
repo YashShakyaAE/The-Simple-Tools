@@ -13,6 +13,8 @@ import { renderVectorSuite } from './tools/vectorSuite.js';
 import { renderCryptoCalc } from './tools/cryptoCalc.js';
 import { renderVideoProcessor } from './tools/videoProcessor.js';
 import { renderBatchSuite } from './tools/batchSuite.js';
+import { renderImageUpscaler } from './tools/imageUpscaler.js';
+import { renderMediaReducer } from './tools/mediaReducer.js';
 
 const TOOL_RENDERERS = {
   'image-converter': renderImageConverter,
@@ -24,7 +26,9 @@ const TOOL_RENDERERS = {
   'vector-suite': renderVectorSuite,
   'crypto-calc': renderCryptoCalc,
   'video-processor': renderVideoProcessor,
-  'batch-suite': renderBatchSuite
+  'batch-suite': renderBatchSuite,
+  'image-upscaler': renderImageUpscaler,
+  'media-reducer': renderMediaReducer
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -356,6 +360,8 @@ function initModal() {
 }
 
 export function openToolModal(toolId) {
+  if (toolId === currentOpenToolId) return;
+
   const tool = TOOLS_DATA.find(t => t.id === toolId);
   if (!tool) return;
 
@@ -478,7 +484,7 @@ function openLegalModal(type) {
   if (type === 'contact') {
     modalIcon.innerHTML = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>`;
     modalTitle.textContent = "Contact & Support";
-    modalSubtitle.textContent = "TheSimple 's Tools Official Creator Support";
+    modalSubtitle.textContent = "TheSimpleTools Official Creator Support";
     modalBody.innerHTML = `
       <div style="display:flex; flex-direction:column; gap:1.75rem;">
         <!-- Email Banner Card -->
@@ -602,7 +608,7 @@ function openLegalModal(type) {
           const payload = {
             name: nameVal,
             email: emailVal,
-            _subject: `[TheSimple 's Tools Contact] ${subjectVal}`,
+            _subject: `[TheSimpleTools Contact] ${subjectVal}`,
             message: messageVal,
             _template: 'table',
             _captcha: 'false'
@@ -687,14 +693,14 @@ function openLegalModal(type) {
     }
   } else if (type === 'about') {
     modalIcon.innerHTML = `<span style="font-size:1.4rem;">🌟</span>`;
-    modalTitle.textContent = "About TheSimple 's Tools";
+    modalTitle.textContent = "About TheSimpleTools";
     modalSubtitle.textContent = "The Ultimate All-in-One Online Utility Toolbox";
     modalBody.innerHTML = `
       <div style="line-height:1.7; color:#cbd5e1; font-size:0.95rem; display:flex; flex-direction:column; gap:1.25rem;">
         <div>
           <h3 style="color:#fff; font-size:1.3rem; margin-bottom:0.5rem;">Our Mission</h3>
           <p>
-            <strong>TheSimple 's Tools</strong> was created with a clear vision: to provide developers, media creators, students, and power users with a lightning-fast, high-tech, and completely private toolbox that operates 100% locally in the browser.
+            <strong>TheSimpleTools</strong> was created with a clear vision: to provide developers, media creators, students, and power users with a lightning-fast, high-tech, and completely private toolbox that operates 100% locally in the browser.
           </p>
         </div>
 
@@ -723,12 +729,12 @@ function openLegalModal(type) {
   } else if (type === 'terms') {
     modalIcon.innerHTML = `<span style="font-size:1.4rem;">⚖️</span>`;
     modalTitle.textContent = "Terms of Service";
-    modalSubtitle.textContent = "TheSimple 's Tools Usage Terms & Conditions";
+    modalSubtitle.textContent = "TheSimpleTools Usage Terms & Conditions";
     modalBody.innerHTML = `
       <div style="line-height:1.7; color:#cbd5e1; font-size:0.95rem; display:flex; flex-direction:column; gap:1.25rem;">
         <div>
           <h3 style="color:#fff; margin-bottom:0.4rem;">1. Acceptance of Terms</h3>
-          <p>By accessing or utilizing TheSimple 's Tools, you acknowledge and agree to these terms. All utilities provided on this platform execute strictly on the client side inside modern web browsers.</p>
+          <p>By accessing or utilizing TheSimpleTools, you acknowledge and agree to these terms. All utilities provided on this platform execute strictly on the client side inside modern web browsers.</p>
         </div>
         <div>
           <h3 style="color:#fff; margin-bottom:0.4rem;">2. Client-Side Processing & Privacy</h3>
@@ -736,7 +742,7 @@ function openLegalModal(type) {
         </div>
         <div>
           <h3 style="color:#fff; margin-bottom:0.4rem;">3. Free & Open Access</h3>
-          <p>TheSimple 's Tools is free to use for personal, academic, and commercial developer workflows without licensing charges.</p>
+          <p>TheSimpleTools is free to use for personal, academic, and commercial developer workflows without licensing charges.</p>
         </div>
         <div>
           <h3 style="color:#fff; margin-bottom:0.4rem;">4. Inquiries & Support</h3>
@@ -767,10 +773,10 @@ function openLegalModal(type) {
   } else if (type === 'api') {
     modalIcon.innerHTML = `<span style="font-size:1.4rem;">⚡</span>`;
     modalTitle.textContent = "Developer API & SDK Documentation";
-    modalSubtitle.textContent = "Integrating TheSimple 's Tools Engine";
+    modalSubtitle.textContent = "Integrating TheSimpleTools Engine";
     modalBody.innerHTML = `
       <div style="line-height:1.7; color:#cbd5e1; font-size:0.95rem; display:flex; flex-direction:column; gap:1.25rem;">
-        <p>TheSimple 's Tools is built as a set of decoupled, high-performance ES6 JavaScript modules that can be imported directly into other web applications.</p>
+        <p>TheSimpleTools is built as a set of decoupled, high-performance ES6 JavaScript modules that can be imported directly into other web applications.</p>
 
         <div>
           <h4 style="color:#fff; margin-bottom:0.3rem;">Example: Client-Side Audio WAV Transcoder</h4>
