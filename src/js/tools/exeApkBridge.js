@@ -237,8 +237,8 @@ export function renderExeApkBridge(container) {
   <title>${appName}</title>
   <style>
     body { background: #0D0D12; color: #fff; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
-    .card { background: rgba(20,20,30,0.8); border: 1px solid #9400D3; border-radius: 16px; padding: 2rem; text-align: center; }
-    h1 { color: #DC143C; margin-bottom: 0.5rem; }
+    .card { background: rgba(20,20,30,0.8); border: 1px solid #C084FC; border-radius: 16px; padding: 2rem; text-align: center; }
+    h1 { color: #F43F5E; margin-bottom: 0.5rem; }
   </style>
 </head>
 <body>

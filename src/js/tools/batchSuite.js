@@ -89,7 +89,7 @@ export function renderBatchSuite(container) {
       canvas.width = 400;
       canvas.height = 300;
       const ctx = canvas.getContext('2d');
-      ctx.fillStyle = i === 1 ? '#DC143C' : i === 2 ? '#8A2BE2' : '#9400D3';
+      ctx.fillStyle = i === 1 ? '#F43F5E' : i === 2 ? '#A855F7' : '#C084FC';
       ctx.fillRect(0, 0, 400, 300);
       ctx.fillStyle = '#fff';
       ctx.font = 'bold 24px sans-serif';

@@ -140,24 +140,24 @@ export function renderCryptoCalc(container) {
                 <span>🎨</span> Color Converter & Palette Inspector
               </h4>
               <div style="display:flex; align-items:center; gap:0.5rem;">
-                <input type="color" id="color-picker-input" value="#9400D3" style="width:36px; height:32px; border:none; border-radius:6px; cursor:pointer; background:transparent;" />
+                <input type="color" id="color-picker-input" value="#C084FC" style="width:36px; height:32px; border:none; border-radius:6px; cursor:pointer; background:transparent;" />
               </div>
             </div>
 
             <div class="color-inspector-body">
-              <div class="color-preview-banner" id="color-preview-banner" style="background-color: #9400D3;">
-                <span class="color-preview-text" id="color-preview-text">#9400D3 • rgb(148, 0, 211)</span>
+              <div class="color-preview-banner" id="color-preview-banner" style="background-color: #C084FC;">
+                <span class="color-preview-text" id="color-preview-text">#C084FC • rgb(192, 132, 252)</span>
               </div>
 
               <div class="color-formats-grid">
                 <div class="color-format-row">
                   <span class="color-format-label">HEX</span>
-                  <input type="text" class="control-input" id="color-hex-val" value="#9400D3" />
+                  <input type="text" class="control-input" id="color-hex-val" value="#C084FC" />
                   <button class="btn btn-secondary btn-sm" data-copy-val="color-hex-val">📋</button>
                 </div>
                 <div class="color-format-row">
                   <span class="color-format-label">RGB</span>
-                  <input type="text" class="control-input" id="color-rgb-val" value="rgb(148, 0, 211)" />
+                  <input type="text" class="control-input" id="color-rgb-val" value="rgb(192, 132, 252)" />
                   <button class="btn btn-secondary btn-sm" data-copy-val="color-rgb-val">📋</button>
                 </div>
                 <div class="color-format-row">
@@ -167,7 +167,7 @@ export function renderCryptoCalc(container) {
                 </div>
                 <div class="color-format-row">
                   <span class="color-format-label">CSS Token</span>
-                  <input type="text" class="control-input" id="color-css-val" value="var(--purple, #9400D3)" />
+                  <input type="text" class="control-input" id="color-css-val" value="var(--purple, #C084FC)" />
                   <button class="btn btn-secondary btn-sm" data-copy-val="color-css-val">📋</button>
                 </div>
               </div>

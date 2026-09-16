@@ -20,14 +20,14 @@
 .btn-primary {
   background: var(--accent-gradient);
   color: #ffffff;
-  box-shadow: 0 4px 20px rgba(220, 20, 60, 0.4);
+  box-shadow: 0 4px 20px rgba(251, 113, 133, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-primary:hover {
   background: var(--accent-gradient-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(220, 20, 60, 0.6), 0 0 20px rgba(148, 0, 211, 0.4);
+  box-shadow: 0 8px 30px rgba(251, 113, 133, 0.6), 0 0 20px rgba(192, 132, 252, 0.4);
 }
 
 .btn-primary:active {
@@ -44,7 +44,7 @@
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: var(--purple);
-  box-shadow: 0 0 15px rgba(148, 0, 211, 0.3);
+  box-shadow: 0 0 15px rgba(192, 132, 252, 0.3);
   transform: translateY(-2px);
 }
 
@@ -56,7 +56,7 @@
 
 .btn-outline:hover {
   border-color: var(--crimson);
-  background: rgba(220, 20, 60, 0.08);
+  background: rgba(251, 113, 133, 0.08);
   color: #ffffff;
 }
 
@@ -98,7 +98,7 @@
 
 .search-box-wrapper:focus-within {
   border-color: var(--purple);
-  box-shadow: 0 16px 45px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(148, 0, 211, 0.35), 0 0 15px rgba(220, 20, 60, 0.25);
+  box-shadow: 0 16px 45px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(192, 132, 252, 0.35), 0 0 15px rgba(251, 113, 133, 0.25);
   background: rgba(24, 24, 38, 0.9);
 }
 
@@ -194,14 +194,14 @@
 .filter-pill:hover {
   color: var(--text-primary);
   background: rgba(255, 255, 255, 0.07);
-  border-color: rgba(148, 0, 211, 0.3);
+  border-color: rgba(192, 132, 252, 0.3);
 }
 
 .filter-pill.active {
   color: #ffffff;
   background: var(--accent-gradient);
   border-color: transparent;
-  box-shadow: 0 4px 15px rgba(220, 20, 60, 0.35);
+  box-shadow: 0 4px 15px rgba(251, 113, 133, 0.35);
 }
 
 .filter-count {
@@ -245,9 +245,9 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   background: var(--accent-gradient);
-  opacity: 0;
+  opacity: 0.9;
   transition: opacity var(--transition-normal);
 }
 
@@ -272,14 +272,15 @@
 .tool-icon-wrapper {
   width: 52px;
   height: 52px;
-  border-radius: var(--radius-md);
+  border-radius: 14px;
   background: var(--accent-gradient);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
   font-size: 1.6rem;
-  box-shadow: 0 4px 15px rgba(220, 20, 60, 0.35);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 4px 16px rgba(251, 113, 133, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   transition: transform var(--transition-fast);
 }
 
@@ -297,20 +298,20 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  background: rgba(148, 0, 211, 0.15);
-  border: 1px solid rgba(148, 0, 211, 0.3);
+  background: rgba(192, 132, 252, 0.15);
+  border: 1px solid rgba(192, 132, 252, 0.3);
   color: #d8b4fe;
 }
 
 .tool-badge.pro {
-  background: rgba(220, 20, 60, 0.15);
-  border-color: rgba(220, 20, 60, 0.35);
+  background: rgba(251, 113, 133, 0.15);
+  border-color: rgba(251, 113, 133, 0.35);
   color: #fca5a5;
 }
 
 .tool-badge.ai {
-  background: linear-gradient(135deg, rgba(220, 20, 60, 0.2), rgba(148, 0, 211, 0.2));
-  border-color: rgba(220, 20, 60, 0.4);
+  background: linear-gradient(135deg, rgba(251, 113, 133, 0.2), rgba(192, 132, 252, 0.2));
+  border-color: rgba(251, 113, 133, 0.4);
   color: #f5d0fe;
 }
 
@@ -432,13 +433,15 @@
 .modal-icon {
   width: 44px;
   height: 44px;
-  border-radius: var(--radius-md);
+  border-radius: 12px;
   background: var(--accent-gradient);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-size: 1.3rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .modal-title {
@@ -466,7 +469,7 @@
 }
 
 .modal-close-btn:hover {
-  background: rgba(220, 20, 60, 0.2);
+  background: rgba(251, 113, 133, 0.2);
   border-color: var(--crimson);
   color: #ffffff;
 }
@@ -481,7 +484,7 @@
    DROPZONE COMPONENT
    ========================================================================== */
 .dropzone {
-  border: 2px dashed rgba(148, 0, 211, 0.35);
+  border: 2px dashed rgba(192, 132, 252, 0.35);
   border-radius: var(--radius-lg);
   background: rgba(20, 20, 32, 0.4);
   padding: 2.5rem 1.5rem;
@@ -493,8 +496,8 @@
 
 .dropzone:hover, .dropzone.dragover {
   border-color: var(--crimson);
-  background: rgba(220, 20, 60, 0.06);
-  box-shadow: 0 0 25px rgba(220, 20, 60, 0.2);
+  background: rgba(251, 113, 133, 0.06);
+  box-shadow: 0 0 25px rgba(251, 113, 133, 0.2);
 }
 
 .dropzone-icon {
@@ -544,7 +547,7 @@
   border: 1px solid var(--purple);
   border-left: 4px solid var(--crimson);
   border-radius: var(--radius-md);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(148, 0, 211, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(192, 132, 252, 0.3);
   display: flex;
   align-items: center;
   gap: 0.8rem;

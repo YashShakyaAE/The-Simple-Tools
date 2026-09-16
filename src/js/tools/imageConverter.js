@@ -121,14 +121,14 @@ export function renderImageConverter(container) {
 
     // Glowing orbs
     ctx.shadowBlur = 60;
-    ctx.shadowColor = '#DC143C';
-    ctx.fillStyle = '#DC143C';
+    ctx.shadowColor = '#F43F5E';
+    ctx.fillStyle = '#F43F5E';
     ctx.beginPath();
     ctx.arc(350, 400, 150, 0, Math.PI * 2);
     ctx.fill();
 
-    ctx.shadowColor = '#9400D3';
-    ctx.fillStyle = '#9400D3';
+    ctx.shadowColor = '#C084FC';
+    ctx.fillStyle = '#C084FC';
     ctx.beginPath();
     ctx.arc(800, 380, 180, 0, Math.PI * 2);
     ctx.fill();

@@ -488,14 +488,14 @@ function openLegalModal(type) {
     modalBody.innerHTML = `
       <div style="display:flex; flex-direction:column; gap:1.75rem;">
         <!-- Email Banner Card -->
-        <div style="background:linear-gradient(135deg, rgba(220,20,60,0.15) 0%, rgba(148,0,211,0.2) 100%); border:1px solid var(--border-glass); border-radius:var(--radius-lg); padding:1.75rem; text-align:center;">
+        <div style="background:linear-gradient(135deg, rgba(251, 113, 133,0.15) 0%, rgba(192, 132, 252,0.2) 100%); border:1px solid var(--border-glass); border-radius:var(--radius-lg); padding:1.75rem; text-align:center;">
           <div style="font-size:2.5rem; margin-bottom:0.5rem;">📬</div>
           <h3 style="font-size:1.35rem; font-weight:700; color:#fff; margin-bottom:0.4rem;">Official Creator Support</h3>
           <p style="color:var(--text-muted); font-size:0.92rem; max-width:480px; margin:0 auto 1.25rem;">
             Questions, tool requests, bug reports, or feature feedback? Reach out directly to the official developer mailbox:
           </p>
 
-          <div style="display:inline-flex; align-items:center; gap:0.75rem; background:rgba(15,15,24,0.9); border:1px solid rgba(148,0,211,0.4); border-radius:var(--radius-full); padding:0.65rem 1.4rem; box-shadow:0 0 20px rgba(148,0,211,0.2); margin-bottom:1.25rem;">
+          <div style="display:inline-flex; align-items:center; gap:0.75rem; background:rgba(15,15,24,0.9); border:1px solid rgba(192, 132, 252,0.4); border-radius:var(--radius-full); padding:0.65rem 1.4rem; box-shadow:0 0 20px rgba(192, 132, 252,0.2); margin-bottom:1.25rem;">
             <span style="font-family:var(--font-mono); font-size:1.05rem; font-weight:700; color:#93c5fd;" id="contact-email-val">yashgamershakya@gmail.com</span>
             <button class="btn btn-secondary btn-sm" id="btn-copy-email-action" style="padding:0.3rem 0.75rem; font-size:0.8rem;">
               📋 Copy
@@ -569,7 +569,7 @@ function openLegalModal(type) {
       const submitBtnDefaultHtml = contactForm.querySelector('#btn-submit-contact')?.innerHTML || '';
       const showFormError = (msg) => {
         statusBox.innerHTML = `
-          <div style="background:rgba(220, 20, 60, 0.12); border:1px solid rgba(220, 20, 60, 0.35); border-radius:var(--radius-md); padding:1rem 1.25rem; margin-bottom:1.25rem;">
+          <div style="background:rgba(251, 113, 133, 0.12); border:1px solid rgba(251, 113, 133, 0.35); border-radius:var(--radius-md); padding:1rem 1.25rem; margin-bottom:1.25rem;">
             <p style="color:#fca5a5; font-size:0.88rem; margin:0;">⚠️ ${escapeHtml(msg)}</p>
           </div>
         `;
@@ -656,7 +656,7 @@ function openLegalModal(type) {
           const isAbort = err && err.name === 'AbortError';
           console.warn('Contact dispatch failed, offering direct mail fallback:', err);
           statusBox.innerHTML = `
-            <div style="background:rgba(220, 20, 60, 0.12); border:1px solid rgba(220, 20, 60, 0.35); border-radius:var(--radius-md); padding:1.25rem; margin-bottom:1.25rem;">
+            <div style="background:rgba(251, 113, 133, 0.12); border:1px solid rgba(251, 113, 133, 0.35); border-radius:var(--radius-md); padding:1.25rem; margin-bottom:1.25rem;">
               <h4 style="color:#fca5a5; font-size:1rem; font-weight:700; margin-bottom:0.4rem;">Direct Mail Fallback Ready</h4>
               <p style="color:#cbd5e1; font-size:0.85rem; margin-bottom:0.75rem; line-height:1.5;">
                 ${escapeHtml(isAbort ? 'The background dispatch timed out.' : 'Background dispatch was blocked (network, adblocker, or FormSubmit mailbox not yet activated).')}

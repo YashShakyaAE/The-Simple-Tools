@@ -124,7 +124,7 @@ export function renderApkUtilities(container) {
     demoZip.file('classes2.dex', 'DEX_BINARY_DATA_SECONDARY_LIBRARY_STREAM');
     demoZip.file('resources.arsc', 'ARSC_TABLE_RESOURCES_CONFIG_DATA');
     demoZip.file('res/values/strings.xml', `<resources>\n  <string name="app_name">TheSimpleTools</string>\n  <string name="tagline">The Ultimate All-in-One Online Utility Toolbox</string>\n</resources>`);
-    demoZip.file('res/drawable/ic_launcher.xml', `<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">\n  <path android:fillColor="#DC143C" android:pathData="M54,10 L94,54 L54,98 L14,54 Z"/>\n</vector>`);
+    demoZip.file('res/drawable/ic_launcher.xml', `<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">\n  <path android:fillColor="#F43F5E" android:pathData="M54,10 L94,54 L54,98 L14,54 Z"/>\n</vector>`);
     demoZip.file('assets/config.json', JSON.stringify({ app: "TheSimpleTools", version: "1.0.0", creator: "YashGamerShakya", email: "yashgamershakya@gmail.com" }, null, 2));
     demoZip.file('lib/arm64-v8a/libsimpleyash.so', 'ARM64_NATIVE_SO_BINARY');
     demoZip.file('META-INF/CERT.RSA', 'RSA_SECURITY_SIGNATURE_KEY');

@@ -114,9 +114,9 @@ export function renderVectorSuite(container) {
     const demoSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
     <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#DC143C" />
-      <stop offset="50%" stop-color="#8A2BE2" />
-      <stop offset="100%" stop-color="#9400D3" />
+      <stop offset="0%" stop-color="#F43F5E" />
+      <stop offset="50%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#C084FC" />
     </linearGradient>
     <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="10" result="glow" />
@@ -126,7 +126,7 @@ export function renderVectorSuite(container) {
       </feMerge>
     </filter>
   </defs>
-  <rect width="512" height="512" rx="100" fill="#0D0D12" stroke="#9400D3" stroke-width="4"/>
+  <rect width="512" height="512" rx="100" fill="#0D0D12" stroke="#C084FC" stroke-width="4"/>
   <circle cx="256" cy="256" r="170" fill="none" stroke="url(#primaryGrad)" stroke-width="14" filter="url(#neonGlow)"/>
   <path d="M190 170 L322 170 L256 342 Z" fill="url(#primaryGrad)" filter="url(#neonGlow)"/>
   <circle cx="256" cy="235" r="32" fill="#0D0D12"/>

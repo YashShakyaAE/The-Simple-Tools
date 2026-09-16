@@ -105,7 +105,7 @@ export function renderImageUpscaler(container) {
             <span id="upscale-progress-pct" style="font-size:0.85rem; color:#86efac; font-weight:700;">0%</span>
           </div>
           <div style="width:100%; height:6px; background:rgba(255,255,255,0.08); border-radius:3px; overflow:hidden;">
-            <div id="upscale-progress-bar" style="width:0%; height:100%; background:linear-gradient(90deg, #DC143C, #9400D3); border-radius:3px; transition:width 0.3s ease;"></div>
+            <div id="upscale-progress-bar" style="width:0%; height:100%; background:linear-gradient(90deg, #F43F5E, #C084FC); border-radius:3px; transition:width 0.3s ease;"></div>
           </div>
           <div id="upscale-progress-msg" style="font-size:0.78rem; color:var(--text-muted); margin-top:0.4rem;">Initializing multi-pass upscaling engine…</div>
         </div>
@@ -217,14 +217,14 @@ export function renderImageUpscaler(container) {
     ctx.fillRect(0, 0, 320, 240);
 
     ctx.shadowBlur = 30;
-    ctx.shadowColor = '#DC143C';
-    ctx.fillStyle = '#DC143C';
+    ctx.shadowColor = '#F43F5E';
+    ctx.fillStyle = '#F43F5E';
     ctx.beginPath();
     ctx.arc(100, 120, 50, 0, Math.PI * 2);
     ctx.fill();
 
-    ctx.shadowColor = '#9400D3';
-    ctx.fillStyle = '#9400D3';
+    ctx.shadowColor = '#C084FC';
+    ctx.fillStyle = '#C084FC';
     ctx.beginPath();
     ctx.arc(220, 120, 60, 0, Math.PI * 2);
     ctx.fill();

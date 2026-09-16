@@ -44,7 +44,7 @@ export function renderAudioEnhancer(container) {
           </div>
           <div style="display:flex; gap:0.6rem;">
             <button class="btn btn-secondary btn-sm" id="enh-toggle-orig">Original Audio</button>
-            <button class="btn btn-primary btn-sm" id="enh-toggle-enhanced" style="box-shadow:0 0 15px rgba(220,20,60,0.6);">⚡ AI Enhanced</button>
+            <button class="btn btn-primary btn-sm" id="enh-toggle-enhanced" style="box-shadow:0 0 15px rgba(251, 113, 133,0.6);">⚡ AI Enhanced</button>
           </div>
         </div>
 
@@ -354,8 +354,8 @@ export function renderAudioEnhancer(container) {
 
         // Neon Crimson to Purple gradient
         const grad = ctx.createLinearGradient(0, canvas.height, 0, canvas.height - barHeight);
-        grad.addColorStop(0, '#DC143C');
-        grad.addColorStop(0.5, '#8A2BE2');
+        grad.addColorStop(0, '#F43F5E');
+        grad.addColorStop(0.5, '#A855F7');
         grad.addColorStop(1, '#00F0FF');
 
         ctx.fillStyle = grad;

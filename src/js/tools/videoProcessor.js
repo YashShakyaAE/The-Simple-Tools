@@ -123,15 +123,15 @@ export function renderVideoProcessor(container) {
 
         // Animated neon circles
         ctx.shadowBlur = 40;
-        ctx.shadowColor = '#DC143C';
-        ctx.fillStyle = '#DC143C';
+        ctx.shadowColor = '#F43F5E';
+        ctx.fillStyle = '#F43F5E';
         ctx.beginPath();
         const x1 = 400 + Math.sin(frame * 0.1) * 120;
         ctx.arc(x1, 360, 120, 0, Math.PI * 2);
         ctx.fill();
 
-        ctx.shadowColor = '#9400D3';
-        ctx.fillStyle = '#9400D3';
+        ctx.shadowColor = '#C084FC';
+        ctx.fillStyle = '#C084FC';
         ctx.beginPath();
         const x2 = 880 - Math.sin(frame * 0.1) * 120;
         ctx.arc(x2, 360, 140, 0, Math.PI * 2);

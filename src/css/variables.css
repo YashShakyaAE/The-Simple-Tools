@@ -7,19 +7,19 @@
   --bg-input: rgba(15, 15, 23, 0.8);
   --bg-glass-card: rgba(20, 20, 30, 0.65);
 
-  /* Accents */
-  --crimson: #DC143C;
-  --crimson-glow: rgba(220, 20, 60, 0.4);
-  --crimson-light: #ff335c;
-  --violet: #8A2BE2;
-  --violet-glow: rgba(138, 43, 226, 0.35);
-  --purple: #9400D3;
-  --purple-glow: rgba(148, 0, 211, 0.4);
-  --neon-cyan: #00F0FF;
-  --neon-cyan-glow: rgba(0, 240, 255, 0.3);
-  --accent-gradient: linear-gradient(135deg, #DC143C 0%, #8A2BE2 50%, #9400D3 100%);
-  --accent-gradient-hover: linear-gradient(135deg, #ff234f 0%, #9d3bf3 50%, #a815e8 100%);
-  --accent-gradient-subtle: linear-gradient(135deg, rgba(220, 20, 60, 0.15) 0%, rgba(138, 43, 226, 0.15) 50%, rgba(148, 0, 211, 0.15) 100%);
+  /* Accents — brand duotone: light crimson → light purple */
+  --crimson: #F43F5E;
+  --crimson-glow: rgba(244, 63, 94, 0.4);
+  --crimson-light: #FB7185;
+  --violet: #A855F7;
+  --violet-glow: rgba(168, 85, 247, 0.35);
+  --purple: #C084FC;
+  --purple-glow: rgba(192, 132, 252, 0.4);
+  --neon-cyan: #67E8F9;
+  --neon-cyan-glow: rgba(103, 232, 249, 0.3);
+  --accent-gradient: linear-gradient(135deg, #FB7185 0%, #C084FC 100%);
+  --accent-gradient-hover: linear-gradient(135deg, #fda4af 0%, #d8b4fe 100%);
+  --accent-gradient-subtle: linear-gradient(135deg, rgba(251, 113, 133, 0.15) 0%, rgba(192, 132, 252, 0.15) 100%);
 
   /* Brand lockup — light crimson → light purple (logo, wordmark, favicon) */
   --brand-crimson-light: #FB7185;
@@ -29,10 +29,10 @@
   --wordmark-gradient: linear-gradient(120deg, #FDA4AF 0%, #F0ABFC 60%, #D8B4FE 100%);
 
   /* Borders & Outlines */
-  --border-glass: rgba(148, 0, 211, 0.22);
-  --border-glass-hover: rgba(220, 20, 60, 0.65);
+  --border-glass: rgba(192, 132, 252, 0.25);
+  --border-glass-hover: rgba(251, 113, 133, 0.65);
   --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-glow: 0 0 15px rgba(148, 0, 211, 0.3), 0 0 30px rgba(220, 20, 60, 0.15);
+  --border-glow: 0 0 15px rgba(192, 132, 252, 0.3), 0 0 30px rgba(251, 113, 133, 0.15);
 
   /* Typography */
   --text-primary: #FFFFFF;
@@ -44,8 +44,8 @@
 
   /* Shadows */
   --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 0 1px 1px rgba(255, 255, 255, 0.05);
-  --shadow-card-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(148, 0, 211, 0.35);
-  --shadow-modal: 0 25px 60px -15px rgba(0, 0, 0, 0.85), 0 0 40px rgba(148, 0, 211, 0.25);
+  --shadow-card-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(192, 132, 252, 0.35);
+  --shadow-modal: 0 25px 60px -15px rgba(0, 0, 0, 0.85), 0 0 40px rgba(192, 132, 252, 0.25);
 
   /* Radius */
   --radius-sm: 8px;
