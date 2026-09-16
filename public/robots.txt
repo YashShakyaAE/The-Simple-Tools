@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thesimpletools.yashgamershakya.workers.dev/sitemap.xml
